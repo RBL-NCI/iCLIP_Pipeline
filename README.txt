@@ -1,3 +1,5 @@
+Data samples and novoalign index in /scratch/homanpj/iCLIP_pipeline
+
 1) Demultiplex and trim
 Demultiplex.sh
 	Use iCount tools to demultiplex and trim fastq data
