@@ -48,3 +48,20 @@ ddup_unique.NH.mm.sh
 	index
 		Input:/data/RBL_NCI/Wolin/Phil/mESC_clip/Novo_UMI_split/bam_icountprocess/mm10_Gencode_rRNA/iCount_all/sep_MM_Uniq/recomb_NHtag/bam_recomb_NHtag/Ro_Clip_iCountcutadpt_all.unique.NH.mm.bam 
 		Output:/data/RBL_NCI/Wolin/Phil/mESC_clip/Novo_UMI_split/bam_icountprocess/mm10_Gencode_rRNA/iCount_all/sep_MM_Uniq/recomb_NHtag/bam_recomb_NHtag/Ro_Clip_iCountcutadpt_all.unique.NH.mm.ddup.s.bam
+
+
+
+4) Identify CLIP peaks
+1_CombAll_novoalign_uniquebam_Find_Peaks.sh
+	Uses samtools, bedrolls and custom R scripts to identify and count CLIP peaks
+	- bedtools merge to find aligned regions
+	- Rscript to create bed file of regions
+	-bedtools coverage to get reads per region
+	-Rsscrit to create table of CLIP locations
+
+	- For control samples I do not find peaks but only count peaks from regions found from Ro samples
+	
+	Input: /data/RBL_NCI/Wolin/Phil/mESC_clip/Novo_UMI_split/bam_icountprocess/mm10_Gencode_rRNA/iCount_all/sep_MM_Uniq/unique/Ro_Clip_iCountcutadpt_all.unique.NH.ddup.s.bam
+		:UntNts_CIGAR_V6b_count.R
+	Output :Ro_Clip_iCountcutadpt_all.unique.NH.ddup.s.bam.PeakscountsUniq.txt	
+			
