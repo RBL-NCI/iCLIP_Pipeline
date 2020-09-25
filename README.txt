@@ -23,11 +23,6 @@ scriptloop_novoSAM_all_rRNAGencode.py
 		novoalign index: /scratch/homanpj/iCLIP_pipeline/mm10_gencode_prerRNA/mm10_gencode_prerRNA
 		output: /scratch/homanpj/iCLIP_pipeline/bam/mm10_Gencode_rRNA/splitNovoAlign/Ro/Ro_Clip_iCountcutadpt.split.aa.all.sam  
 
-scriptloop_comb_all.py - create Combined Novoaliged file -> - Comb_iCount_all.sh
-	create shell script for combine all aligned sam files 
-		Input: /data/RBL_NCI/Wolin/Phil/mESC_clip/Novo_UMI_split/bam_icountprocess/mm10_Gencode_rRNA/Ro_Clip_iCountcutadpt.split.cw.all.sam
-		Output /data/RBL_NCI/Wolin/Phil/mESC_clip/Novo_UMI_split/bam_icountprocess/mm10_Gencode_rRNA/iCount_all/Ro_Clip_iCountcutadpt_all.sam
-
 3) Deduplicate Reads
 scriptloop_sep_uniq_mm_all.py -> Separate_iCount_all.sh 
 	create shell script that separates MM from unique reads and adds NH tag to Unique reads -  (Novoalign only adds NH tag to multi map reads)
