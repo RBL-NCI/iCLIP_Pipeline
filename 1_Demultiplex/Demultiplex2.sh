@@ -1,5 +1,7 @@
 #swarm -f Demultiplex2.sh --verbose 1 -g 50 -t 32 -b 100 --time 24:00:00 --job-name 2iCountDemultiplex --module samtools,python
 
+# Strip barcode
+
 cd /scratch/homanpj/iCLIP_pipeline/FASTQ/
 iCount demultiplex \
 -ml 15 \
@@ -10,6 +12,8 @@ NNNTGGCNN NNNCGGANN \
 
 mv samples1/demux_NNNTGGCNN.fastq.gz samples1/Ro_Clip.fastq.gz
 mv samples1/demux_NNNCGGANN.fastq.gz samples1/Control_Clip.fastq.g
+
+# Strip adapters
 
 iCount cutadapt \
 -ml 1 \
