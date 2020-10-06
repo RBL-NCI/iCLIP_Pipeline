@@ -11,7 +11,7 @@ NNNTGGCNN NNNCGGANN \
 --out_dir "/scratch/homanpj/iCLIP_pipeline/FASTQ/samples1"
 
 mv samples1/demux_NNNTGGCNN.fastq.gz samples1/Ro_Clip.fastq.gz
-mv samples1/demux_NNNCGGANN.fastq.gz samples1/Control_Clip.fastq.g
+mv samples1/demux_NNNCGGANN.fastq.gz samples1/Control_Clip.fastq.gz
 
 # Strip adapters
 
